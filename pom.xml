@@ -12,11 +12,11 @@
 
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>5.3.24</spring.version>
-        <servletapi.version>5.0.0</servletapi.version>
+        <servletapi.version>4.0.4</servletapi.version>
         <thymeleaf.spring.version>3.1.1.RELEASE</thymeleaf.spring.version>
         <webjars.version>5.2.3</webjars.version>
     </properties>
@@ -41,5 +41,13 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
